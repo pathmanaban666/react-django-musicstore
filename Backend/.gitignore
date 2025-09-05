@@ -1,0 +1,44 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Django specific
+*.log
+db.sqlite3
+
+# Virtual environment
+.venv/
+venv/
+venv.bak/
+
+# Migrations
+*/migrations/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# JetBrains IDEs (PyCharm, etc.)
+.idea/
+
+# Pytest
+.cache/
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+*.swp
+
+# Miscellaneous
+*.bak
+*.swp
+*.swo
