@@ -46,7 +46,13 @@ export default function ProductDetail() {
     try {
       const res = await api.post('cart/items/', { product_id, quantity });
       toast.success(res.data?.message || 'Added to cart successfully!');
-    } catch {
+    } catch(err) {
+      const status = err?.response?.status;
+      if (status === 401) {
+      toast.error('Login is required to add items to the cart.');
+      navigate('/login')
+      return; 
+      }
       toast.error('Failed to add product to cart. Please try again.');
     }
   };
